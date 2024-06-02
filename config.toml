@@ -1,0 +1,29 @@
+theme = "monokai_pro"
+
+[editor]
+bufferline = "multiple"
+line-number = "relative"
+mouse = false
+
+[editor.cursor-shape]
+insert = "bar"
+normal = "block"
+select = "underline"
+
+[editor.statusline]
+left = ["mode", "spinner","spacer", "version-control"]
+center = ["file-name"]
+right = ["diagnostics", "selections", "position", "file-encoding", "file-line-ending", "file-type"]
+separator = "|"
+mode.normal = "NORMAL"
+mode.insert = "INSERT"
+mode.select = "SELECT"
+
+[editor.indent-guides]
+render = false
+characters = ""
+skip-levels = 1
+
+# KEY REMAPS
+[keys.insert]
+j = { j = "normal_mode" }
