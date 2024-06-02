@@ -1,3 +1,4 @@
+# For TailwindCSS
 [[language]]
 name = "html"
 language-servers = [ "vscode-html-language-server", "tailwindcss-ls" ]
@@ -17,3 +18,23 @@ language-servers = [ "typescript-language-server", "tailwindcss-ls" ]
 [[language]]
 name = "svelte"
 language-servers = [ "svelteserver", "tailwindcss-ls" ]
+
+# For Emmet
+[language-server.emmet-lsp]
+command = "emmet-language-server"
+args = ["--stdio"]
+
+[[language]]
+name = "html"
+roots = [".git"]
+language-servers = ["emmet-lsp"]
+
+[[language]]
+name = "jsx"
+roots = [".git"]
+language-servers = ["emmet-lsp"]
+
+[[language]]
+name = "tsx"
+roots = [".git"]
+language-servers = ["emmet-lsp"]
