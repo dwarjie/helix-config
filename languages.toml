@@ -1,23 +1,38 @@
-# For TailwindCSS
+# For TailwindCSS and Prettier
 [[language]]
 name = "html"
+formatter = { command = 'prettier.cmd', args = ["--parser", "html"] }
 language-servers = [ "vscode-html-language-server", "tailwindcss-ls" ]
 
 [[language]]
+name = "json"
+formatter = { command = 'prettier.cmd', args = ["--parser", "json"] }
+
+[[language]]
 name = "css"
+formatter = { command = 'prettier.cmd', args = ["--parser", "css"] }
 language-servers = [ "vscode-css-language-server", "tailwindcss-ls" ]
 
 [[language]]
 name = "jsx"
+formatter = { command = 'prettier.cmd', args = ["--parser", "jsx"] }
 language-servers = [ "typescript-language-server", "tailwindcss-ls" ]
 
 [[language]]
 name = "tsx"
 language-servers = [ "typescript-language-server", "tailwindcss-ls" ]
+formatter = { command = 'prettier.cmd', args = ["--parser", "typescript"] }
+auto-format = true
 
 [[language]]
-name = "svelte"
-language-servers = [ "svelteserver", "tailwindcss-ls" ]
+name = "javascript"
+formatter = { command = 'prettier.cmd', args = ["--parser", "typescript"] }
+auto-format = true
+
+[[language]]
+name = "typescript"
+formatter = { command = 'prettier.cmd', args = ["--parser", "typescript"] }
+auto-format = true
 
 # For Emmet
 [language-server.emmet-lsp]
