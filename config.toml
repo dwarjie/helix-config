@@ -1,7 +1,7 @@
 theme = "monokai_pro"
 
 [editor]
-bufferline = "multiple"
+bufferline = "always"
 line-number = "relative"
 cursorline = true
 mouse = false
