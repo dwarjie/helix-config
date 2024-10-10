@@ -31,6 +31,7 @@ scss = { validate = { enable = true } }
 less = { validate = { enable = true } }
 provideFormatter = true
 
+
 # For TailwindCSS and Prettier
 [[language]]
 name = "typescript"
@@ -75,6 +76,16 @@ auto-format = true
 [[language]]
 name = "python"
 language-servers = [ "pyright" ]
+
+[[language]]
+name = "markdown"
+scope = "source.md"
+injection-regex = "md|markdown"
+file-types = ["md", "markdown", "mdx", "mkd", "mkdn", "mdwn", "mdown", "markdn", "mdtxt", "mdtext", "workbook", { glob = "PULLREQ_EDITMSG" }]
+roots = [".marksman.toml"]
+language-servers = [ "marksman" ]
+indent = { tab-width = 2, unit = "  " }
+block-comment-tokens = { start = "<!--", end = "-->" }
 
 # [[language]]
 # name = "html"
