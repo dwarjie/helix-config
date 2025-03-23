@@ -50,6 +50,15 @@ name = "javascript"
 language-servers = [ "typescript-language-server", "eslint", "emmet-ls", "tailwindcss-ls" ]
 formatter = { command = 'prettier', args = ["--parser", "typescript"] }
 auto-format = true
+scope = "source.js"
+injection-regex = "(js|javascript)"
+language-id = "javascript"
+file-types = ["js", "mjs", "cjs", "rules", "es6", "pac", { glob = ".node_repl_history" }, { glob = "jakefile" }]
+shebangs = ["node"]
+roots = [ "package.json" ]
+comment-token = "//"
+block-comment-tokens = { start = "/*", end = "*/" }
+indent = { tab-width = 2, unit = "  " }
 
 [[language]]
 name = "jsx"
@@ -75,7 +84,11 @@ auto-format = true
 
 [[language]]
 name = "python"
-language-servers = [ "pyright" ]
+language-servers = [ "pylsp" ]
+
+[language-server.pylsp.config.pylsp]
+plugin.ruff.enabled = true
+plugin.black.enabled = true
 
 [[language]]
 name = "markdown"
