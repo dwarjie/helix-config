@@ -85,9 +85,10 @@ auto-format = true
 [[language]]
 name = "python"
 language-servers = [ "pylsp" ]
+formatter = { command = "black", args = ["--quiet", "-"] }
+auto-format = true
 
 [language-server.pylsp.config.pylsp]
-plugin.ruff.enabled = true
 plugin.black.enabled = true
 
 [[language]]
