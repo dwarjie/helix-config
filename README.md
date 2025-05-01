@@ -21,7 +21,12 @@ npm install -g typescript-language-server typescript
 ```bash
 npm i -g vscode-langservers-extracted
 ```
+> Make sure pipx is installed
 - Python Black
 ```bash
 pipx install black
+```
+- Python Black
+```bash
+pipx install python-lsp-server
 ```
